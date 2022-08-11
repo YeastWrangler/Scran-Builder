@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ingredient {
+  color:red
+}
+
+button {
+  height:50px;
+  width: 75px
+}
+
+.button {
+  height:50px;
+  width: 50px
+}
+
+li {
+  width: 50%;
+  list-style-type:square;
+  list-style-position: inside;
+  text-align:center;
+  margin: auto
+
+}
