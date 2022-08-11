@@ -4,7 +4,7 @@ function IngredientTally() {
 const ingredientToAdd = {ingredient: "bread", quantity: 3}
 
 const [ingredientList, setIngredient] = useState([])
-//console.log(input)
+console.log(ingredientList)
   const  handleClick = () => {
       setIngredient((currentIngredients) => {
        let ingredientArray = [...currentIngredients]
@@ -12,14 +12,13 @@ const [ingredientList, setIngredient] = useState([])
        ingredientArray.push(ingredientToAdd)
         return ingredientArray
     })
-    
 }
     return (
         <main>
             <h3> Ingredient Tally:</h3>
             
             {ingredientList.map((item) => {
-                return (<> <p className="ingredient">{item.ingredient}</p> <p>{item.quantity}</p> </>) 
+                return (<> <p key={item.ingredient} className="ingredient">{item.ingredient}</p> <p key={item.quantity}>{item.quantity}</p> </>) 
             })} 
          
             <button className="button"onClick={handleClick}>Click Here!</button> 

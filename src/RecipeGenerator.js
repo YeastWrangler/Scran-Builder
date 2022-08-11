@@ -13,7 +13,7 @@ let mockRecipe = [recipe1, recipe2, recipe3]
     <p>Here's Your Recipe:
     </p>
     <ul> {mockRecipe[Math.floor(Math.random()*mockRecipe.length)].map((line) => {
-        return (<li>{line}</li>) 
+        return (<li key={line}>{line}</li>) 
     })}
     </ul>
     </>)
