@@ -9,7 +9,7 @@ let mockRecipe = [recipe1, recipe2, recipe3];
 const RecipeGenerator = () => {
   return (
     <>
-      <div class="recipe-section">
+      <div className="recipe-section">
         <button>Generate Your Recipe</button>
         <p>Here's Your Recipe:</p>
         <span>

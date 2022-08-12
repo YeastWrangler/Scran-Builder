@@ -1,44 +1,34 @@
 import { useState } from "react";
 import { BsArrowDownLeftCircle } from "react-icons/bs";
 
-function IngredientTally() {
-  const ingredientToAdd = { ingredient: "bread", quantity: 3 };
 
-  const [ingredientList, setIngredient] = useState([]);
-  console.log(ingredientList);
-  const handleClick = () => {
-    setIngredient((currentIngredients) => {
-      let ingredientArray = [...currentIngredients];
-      //console.log(ingredientArray)
-      ingredientArray.push(ingredientToAdd);
-      return ingredientArray;
-    });
-  };
+function IngredientTally(props) {
+  
+  const ingredientList = [props]
+  
   return (
-    <main class="ingredient-tally">
-      <div class="ingredient-tally-button">
+  
+      <div className="ingredient-tally-button">
         <h3> Ingredient Tally:</h3>
 
         {ingredientList.map((item) => {
+          console.log(item, "in tally item")
           return (
             <>
               {" "}
-              <p key={item.ingredient} className="ingredient">
-                {item.ingredient}
+              <p key={item.newIngredient} className="ingredient">
+               { `${item.newIngredient}, ` }
               </p>{" "}
               <p key={item.quantity}>{item.quantity}</p>{" "}
             </>
           );
         })}
 
-        <button className="button" onClick={handleClick}>
-          Click Here!
-        </button>
-        <div class="down-left-button">
+        <div className="down-left-button">
           <BsArrowDownLeftCircle />
         </div>
       </div>
-    </main>
+    
   );
 }
 
