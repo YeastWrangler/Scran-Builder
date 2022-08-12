@@ -1,22 +1,30 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const recipe1 = ["recipe 1","now this", "now that"]
-const recipe2 = ["recipe 2", "break some eggs", "clean up"]
-const recipe3 = ["recipe 3", "cut some stuff", "dinner made"]
+const recipe1 = ["recipe 1", "now this", "now that"];
+const recipe2 = ["recipe 2", "break some eggs", "clean up"];
+const recipe3 = ["recipe 3", "cut some stuff", "dinner made"];
 
+let mockRecipe = [recipe1, recipe2, recipe3];
 
-let mockRecipe = [recipe1, recipe2, recipe3]
+const RecipeGenerator = () => {
+  return (
+    <>
+      <div class="recipe-section">
+        <button>Generate Your Recipe</button>
+        <p>Here's Your Recipe:</p>
+        <span>
+          <ul>
+            {" "}
+            {mockRecipe[Math.floor(Math.random() * mockRecipe.length)].map(
+              (line) => {
+                return <li key={line}>{line}</li>;
+              }
+            )}
+          </ul>
+        </span>
+      </div>
+    </>
+  );
+};
 
- const RecipeGenerator = () => {
-
-    return (<> <button>Generate Your Recipe</button> 
-    <p>Here's Your Recipe:
-    </p>
-    <ul> {mockRecipe[Math.floor(Math.random()*mockRecipe.length)].map((line) => {
-        return (<li key={line}>{line}</li>) 
-    })}
-    </ul>
-    </>)
-}
-
-export default RecipeGenerator
+export default RecipeGenerator;
