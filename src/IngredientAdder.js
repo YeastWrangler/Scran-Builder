@@ -12,8 +12,8 @@ const [ingredientTally, setIngredientTally] = useState([]);
     event.preventDefault()
 
     setIngredientTally((currentIngredients) => {
-      //console.log(newIngredient)
-      return [currentIngredients, ...newIngredient]
+      console.log(newIngredient, "in adder")
+      return [...currentIngredients, newIngredient]
     });
     setNewIngredients("");
   };
@@ -53,7 +53,7 @@ const [ingredientTally, setIngredientTally] = useState([]);
         </h4>
       </div>
       <div className="ingredient-tally">
-        <IngredientTally newIngredient = {ingredientTally}/>
+        <IngredientTally ingredientTally = {ingredientTally}/>
         </div>
     </>
   );
