@@ -2,8 +2,6 @@ import "./App.css";
 import Header from "./Header";
 import IngredientAdder from "./IngredientAdder";
 
-
-
 function App() {
   return (
     <div className="App">
@@ -11,7 +9,6 @@ function App() {
         <Header />
         <IngredientAdder />
       </main>
-      
     </div>
   );
 }
